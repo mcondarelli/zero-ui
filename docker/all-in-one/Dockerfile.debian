@@ -63,7 +63,7 @@ COPY ./backend /app/backend
 
 EXPOSE 4000
 ENV NODE_ENV=production
-ENV ZU_SECURE_HEADERS=true
+ENV ZU_SECURE_HEADERS=false
 ENV ZU_SERVE_FRONTEND=true
 
 # ---- copy ZeroNSd
@@ -72,7 +72,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates
 
 # ---- final setup
 
-VOLUME /var/lib/zerotier
+VOLUME /var/lib/zerotier-one
+VOLUME /app/backend/data
 
 COPY docker/all-in-one/entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
