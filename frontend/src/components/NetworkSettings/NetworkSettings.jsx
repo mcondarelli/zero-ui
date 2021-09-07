@@ -7,7 +7,7 @@ import {
   Grid,
   Typography,
   TextField,
-  Select,
+  Select, List,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
@@ -81,14 +81,36 @@ function NetworkSettings({ network, setNetwork }) {
           <Divider />
           <Grid item>
             <Typography>Access Control</Typography>
-            <Select
-              native
-              value={network["config"]["private"]}
-              onChange={handleChange("config", "private", "json")}
+            <List
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                }}
             >
-              <option value={true}>Private</option>
-              <option value={false}>Public</option>
-            </Select>
+              <Select
+                native
+                value={network["config"]["private"]}
+                onChange={handleChange("config", "private", "json")}
+              >
+                <option value={true}>Private</option>
+                <option value={false}>Public</option>
+              </Select>
+              <Divider
+                  orientation="vertical"
+                  style={{
+                    margin: "10px",
+                  }}
+                  flexItem
+              />
+              <Grid item>
+                <Checkbox
+                    checked={network["config"]["enableDNS"]}
+                    color="primary"
+                    onChange={handleChange("config", "enableDNS", "checkbox")}
+                />
+                <span>Enable DNS</span>
+              </Grid>
+            </List>
           </Grid>
           <Divider />
           <Grid item>
