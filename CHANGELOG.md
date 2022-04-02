@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/dec0dOS/zero-ui/compare/v1.2.0...v1.2.1) (2021-12-19)
+
+## [1.2.0](https://github.com/dec0dOS/zero-ui/compare/v1.1.5...v1.2.0) (2021-12-19)
+
+### Features
+
+- update_frontend_online_parsing ([cd6699d](https://github.com/dec0dOS/zero-ui/commit/cd6699d9b7d90c514dd2b870da4b61b8a5ea4ea0))
+
+### [1.1.5](https://github.com/dec0dOS/zero-ui/compare/v1.1.4...v1.1.5) (2021-12-16)
+
+### [1.1.4](https://github.com/dec0dOS/zero-ui/compare/v1.1.3...v1.1.4) (2021-12-16)
+
+### [1.1.3](https://github.com/dec0dOS/zero-ui/compare/v1.1.2...v1.1.3) (2021-12-16)
+
+### [1.1.2](https://github.com/dec0dOS/zero-ui/compare/v1.1.1...v1.1.2) (2021-12-16)
+
+### [1.1.1](https://github.com/dec0dOS/zero-ui/compare/v1.1.0...v1.1.1) (2021-12-16)
+
+### Bug Fixes
+
+- migrate to yarn v3 ([781a48d](https://github.com/dec0dOS/zero-ui/commit/781a48d341bf386cfbc917c78789f802227bfdef))
+
+## [1.1.0](https://github.com/dec0dOS/zero-ui/compare/v1.0.21...v1.1.0) (2021-12-16)
+
+### Features
+
+- add capabilities and tags support ([8f89174](https://github.com/dec0dOS/zero-ui/commit/8f891747d6d98c0957405954f50c5bab5d2f9551)), closes [#35](https://github.com/dec0dOS/zero-ui/issues/35)
+- some improvements in ui for caps and tags ([2f27c11](https://github.com/dec0dOS/zero-ui/commit/2f27c112ea2e05f8ca6de8219179d51261ab721f))
+
+### Bug Fixes
+
+- fix compatibility for existing networks after supporting tags and capabilities ([a813d05](https://github.com/dec0dOS/zero-ui/commit/a813d05b3c2c2c286ae1df860eca209215347ce0))
+- fix original managed IP delete ([9386aa7](https://github.com/dec0dOS/zero-ui/commit/9386aa724b67019e0783691f611fc08877cbfe85)), closes [#12](https://github.com/dec0dOS/zero-ui/issues/12)
+- parse tags and capabilities in flow rules correctly ([369d96e](https://github.com/dec0dOS/zero-ui/commit/369d96e50ab523c85123e6d783c44d012e7756ed))
+- rename "tag enum id" to "tag value" ([27aa2c5](https://github.com/dec0dOS/zero-ui/commit/27aa2c5d47d99c329d1e80b60a08307e30239db1))
+
+### [1.0.21](https://github.com/dec0dOS/zero-ui/compare/v1.0.20...v1.0.21) (2021-11-04)
+
 ### [1.0.20](https://github.com/dec0dOS/zero-ui/compare/v1.0.19...v1.0.20) (2021-08-24)
 
 ### [1.0.19](https://github.com/dec0dOS/zero-ui/compare/v1.0.18...v1.0.19) (2021-08-24)

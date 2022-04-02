@@ -1,27 +1,23 @@
-FROM node:current-alpine as build-stage
+FROM node:lts-alpine as build-stage
 
 ENV INLINE_RUNTIME_CHUNK=false
 ENV GENERATE_SOURCEMAP=false
 
-RUN yarn set version berry
-
 WORKDIR /app/frontend
 COPY ./frontend/package*.json /app/frontend
-COPY ./frontend/yarn.lock /app/frontend
-RUN yarn install
+RUN yarn install --network-timeout 1000000
 
 COPY ./frontend /app/frontend
 RUN yarn build
 
 
-FROM node:current-alpine
+FROM node:lts-alpine
 
 WORKDIR /app/frontend/build
 COPY --from=build-stage /app/frontend/build /app/frontend/build/
 
 WORKDIR /app/backend
 COPY ./backend/package*.json /app/backend
-COPY ./backend/yarn.lock /app/backend
 RUN yarn install
 
 COPY ./backend /app/backend
